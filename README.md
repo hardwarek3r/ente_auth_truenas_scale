@@ -28,7 +28,7 @@ POOL is the name of your pool
 
 3- Open `compose.yaml` with `nano` of `vim` and replace the following:
 
-```
+```diff
 3,6c3
 <     build:
 <       context: .
