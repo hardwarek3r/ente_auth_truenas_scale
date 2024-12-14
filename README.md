@@ -15,12 +15,13 @@ This is a guide on how to quickly setup Ente Auth on TrueNAS Scale Electron Eel 
 
 2- Run the commands bellow using the Shell (System -> Shell):
 
-```
-    $  cd /mnt/POOL/Apps_Config/Ente
-    [/mnt/POOL/Apps_Config/Ente]$  curl -LO https://raw.githubusercontent.com/ente-io/ente/main/server/compose.yaml
-    [/mnt/POOL/Apps_Config/Ente]$  curl -LO https://raw.githubusercontent.com/ente-io/ente/main/server/scripts/compose/credentials.yaml
-    [/mnt/POOL/Apps_Config/Ente]$  curl -LO https://raw.githubusercontent.com/ente-io/ente/main/server/scripts/compose/minio-provision.sh
-    [/mnt/POOL/Apps_Config/Ente]$  touch museum.yaml
+```bash
+$  cd /mnt/POOL/Apps_Config/Ente
+$  curl -LO https://raw.githubusercontent.com/ente-io/ente/main/server/compose.yaml
+$  curl -LO https://raw.githubusercontent.com/ente-io/ente/main/server/scripts/compose/credentials.yaml
+$  curl -LO https://raw.githubusercontent.com/ente-io/ente/main/server/scripts/compose/minio-provision.sh
+$  touch museum.yaml
+$  mkdir data
 
 ```
 POOL is the name of your pool
@@ -54,8 +55,14 @@ POOL is the name of your pool
 >       - /mnt/nas/Apps_Config/Ente/minio-provision.sh:/provision.sh:ro
 ```
 
+4- Copy the content of the modifier `compose.yaml` then go to `Apps -> Discover Apps -> Install via YAML`
+and paste the content
+
+5- Make sure the ports 8080, 2112, 5432, 3200, 3201 aren't used by other apps, if so replace them
+
+6- After that, you can test it by going to `http://TRUENAS_IP:8080/ping`
 
 
 ## References
 
-    - https://github.com/ente-io/ente/blob/main/server/docs/docker.md
+- https://github.com/ente-io/ente/blob/main/server/docs/docker.md
