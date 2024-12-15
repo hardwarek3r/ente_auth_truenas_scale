@@ -7,7 +7,12 @@ This is a guide on how to quickly setup Ente Auth on TrueNAS Scale Electron Eel 
 ## Requirements
 
 - TrueNAS Scale 24.10 (Because you need the feature of custom docker apps)
+- Basic Linux shell skills
 
+## Video Tutorial
+
+
+[![Video Setup Ente Auth on TrueNAS Scale](https://img.youtube.com/vi/Keb8VApLj7I/0.jpg)](https://youtu.be/Keb8VApLj7I "Setup your OWN Open-Source 2FA with Ente Auth on TrueNAS Scale")
 
 ## Steps
 
